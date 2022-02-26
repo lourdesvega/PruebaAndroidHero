@@ -31,6 +31,8 @@
     <string name="connections">Conexiones: </string>
     <string name="group_affiliation">Afilaciones grupales: </string>
     <string name="relatives">Familiares: </string>
+    <string name="search_hero">Buscar un héroe</string>
+    <string name="list_empty">No hay resultados con ese nombre</string>
 
 
 </resources>

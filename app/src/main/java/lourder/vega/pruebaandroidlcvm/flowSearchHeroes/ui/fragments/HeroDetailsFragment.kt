@@ -9,6 +9,9 @@ import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.Navigation
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions.bitmapTransform
+import jp.wasabeef.glide.transformations.BitmapTransformation
+import jp.wasabeef.glide.transformations.BlurTransformation
 import lourder.vega.pruebaandroidlcvm.R
 import lourder.vega.pruebaandroidlcvm.databinding.FragmentHeroDetailsBinding
 import lourder.vega.pruebaandroidlcvm.flowSearchHeroes.ui.adapter.DataAdapter
@@ -51,20 +54,20 @@ class HeroDetailsFragment : Fragment() {
         viewModel.getHero.observe(this) { result ->
             when(result){
                 is NetworkResult.Success->{
-
-                    Toast.makeText(context, "Correcto", Toast.LENGTH_LONG).show()
                     adapterWeight.setList(result.data?.appearance?.weight ?: listOf())
                     adapterAlias.setList(result.data?.biography?.aliases ?: listOf())
                     adapterHeight.setList(result.data?.appearance?.height ?: listOf())
 
 
-                    binding.apply {
 
+                    binding.apply {
 
                         Glide.with(ivHero)
                             .load(result.data?.images?.md)
+                            .placeholder(R.drawable.ic_question)
                             .centerCrop()
                             .into(ivHero)
+
 
                         tvNameHero.text = result.data?.name
 
@@ -93,14 +96,21 @@ class HeroDetailsFragment : Fragment() {
 
                         tvGroupAffiliationDescription.text = result.data?.connections?.groupAffiliation
                         tvRelativesDescription.text = result.data?.connections?.relatives
+                        pb.visibility = View.GONE
 
+                        Glide.with(ivBackground)
+                            .load(result.data?.images?.md)
+                            .apply(bitmapTransform(BlurTransformation(150)))
+                            .into(ivBackground)
                     }
 
                 }
                 is NetworkResult.Error->{
+                    binding.pb.visibility = View.GONE
                     Toast.makeText(context,"Error", Toast.LENGTH_LONG).show()
                 }
                 is NetworkResult.Loading->{
+                    binding.pb.visibility = View.VISIBLE
                 }
             }
 
