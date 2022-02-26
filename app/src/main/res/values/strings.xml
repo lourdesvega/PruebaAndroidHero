@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">PruebaAndroidLCVM</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_hero_list">Listado de héroes</string>
+    <string name="power_stats">Estadísticas de poder</string>
+    <string name="intelligence">Inteligencia: </string>
+    <string name="strength">Fuerza: </string>
+    <string name="speed">Velocidad: </string>
+    <string name="power">Poder: </string>
+    <string name="durability">Durabilidad: </string>
+    <string name="combat">Combate: </string>
+    <string name="biography">Biografía: </string>
+    <string name="full_name">Nombre Completo: </string>
+    <string name="alter_egos">Alter egos: </string>
+    <string name="aliases">Alias: </string>
+    <string name="place_of_birth">Lugar de nacimiento: </string>
+    <string name="first_appearance">Primera aparición: </string>
+    <string name="publisher">Editora: </string>
+    <string name="alignment">Alineación: </string>
+    <string name="appearance">Apariencia: </string>
+    <string name="gender">Género: </string>
+    <string name="race">Raza: </string>
+    <string name="height">Altura: </string>
+    <string name="weight">Peso: </string>
+    <string name="eye_color">Color de ojos: </string>
+    <string name="hair_color">Color de cabello: </string>
+    <string name="work">Trabajo: </string>
+    <string name="occupation">Ocupación: </string>
+    <string name="base">Base: </string>
+    <string name="connections">Conexiones: </string>
+    <string name="group_affiliation">Afilaciones grupales: </string>
+    <string name="relatives">Familiares: </string>
+
+
+</resources>

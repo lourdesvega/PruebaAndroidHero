@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_name_hero"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        tools:text="Batman"
+        app:layout_constraintStart_toStartOf="@+id/gl_left"
+        app:layout_constraintTop_toTopOf="@+id/gl_top" />
+
+
+    <ImageView
+        android:id="@+id/iv_hero"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:src="@drawable/batman"
+        android:layout_marginTop="16dp"
+        app:layout_constraintWidth_percent=".4"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/gl_right"
+        app:layout_constraintStart_toStartOf="@+id/gl_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_hero" />
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gl_right"
+        app:layout_constraintStart_toStartOf="@+id/gl_left"
+        app:layout_constraintTop_toBottomOf="@+id/iv_hero">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_power_stats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="@string/power_stats"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_intelligence"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/intelligence"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_power_stats" />
+
+            <TextView
+                android:id="@+id/tv_intelligence_percent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_intelligence"
+                app:layout_constraintTop_toTopOf="@+id/tv_intelligence"
+                tools:text="38" />
+
+
+
+            <TextView
+                android:id="@+id/tv_strength"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/strength"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_intelligence" />
+
+            <TextView
+                android:id="@+id/tv_strength_percent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_strength"
+                app:layout_constraintTop_toTopOf="@+id/tv_strength"
+                tools:text="38" />
+
+
+            <TextView
+                android:id="@+id/tv_speed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/speed"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_strength" />
+
+            <TextView
+                android:id="@+id/tv_speed_percent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_speed"
+                app:layout_constraintTop_toTopOf="@+id/tv_speed"
+                tools:text="38" />
+
+            <TextView
+                android:id="@+id/tv_durability"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/durability"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_speed" />
+
+            <TextView
+                android:id="@+id/tv_durability_percent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_durability"
+                app:layout_constraintTop_toTopOf="@+id/tv_durability"
+                tools:text="38" />
+
+
+            <TextView
+                android:id="@+id/tv_power"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/power"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_durability" />
+
+            <TextView
+                android:id="@+id/tv_power_percent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_power"
+                app:layout_constraintTop_toTopOf="@+id/tv_power"
+                tools:text="38" />
+
+
+
+            <TextView
+                android:id="@+id/tv_combat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/combat"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_power" />
+
+            <TextView
+                android:id="@+id/tv_combat_percent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_combat"
+                app:layout_constraintTop_toTopOf="@+id/tv_combat"
+                tools:text="38" />
+
+
+            <TextView
+                android:id="@+id/tv_biography"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="@string/biography"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_combat_percent" />
+
+
+            <TextView
+                android:id="@+id/tv_full_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/full_name"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_biography" />
+
+            <TextView
+                android:id="@+id/tv_full_name_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_full_name"
+                app:layout_constraintTop_toTopOf="@+id/tv_full_name"
+                tools:text="Richard Milhouse Jones" />
+
+            <TextView
+                android:id="@+id/tv_alter_egos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/alter_egos"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_full_name_description" />
+
+            <TextView
+                android:id="@+id/tv_alter_egos_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_alter_egos"
+                app:layout_constraintTop_toTopOf="@+id/tv_alter_egos"
+                tools:text="Richard Milhouse Jones" />
+
+            <TextView
+                android:id="@+id/tv_aliases"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/aliases"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_alter_egos_description" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_aliases"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_aliases"
+                app:layout_constraintTop_toTopOf="@+id/tv_aliases"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_data" />
+
+
+            <TextView
+                android:id="@+id/tv_place_of_birth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/place_of_birth"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_aliases" />
+
+            <TextView
+                android:id="@+id/tv_place_of_birth_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/rv_aliases"
+                app:layout_constraintStart_toEndOf="@+id/tv_place_of_birth"
+                app:layout_constraintTop_toTopOf="@+id/tv_place_of_birth"
+                tools:text="Richard Milhouse Jones" />
+
+
+            <TextView
+                android:id="@+id/tv_first_appearance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/first_appearance"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_place_of_birth_description" />
+
+            <TextView
+                android:id="@+id/tv_first_appearance_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_first_appearance"
+                app:layout_constraintTop_toTopOf="@+id/tv_first_appearance"
+                tools:text="Richard Milhouse Jones" />
+
+            <TextView
+                android:id="@+id/tv_publisher"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/publisher"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_first_appearance_description" />
+
+            <TextView
+                android:id="@+id/tv_publisher_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_publisher"
+                app:layout_constraintTop_toTopOf="@+id/tv_publisher"
+                tools:text="Richard Milhouse Jones" />
+
+            <TextView
+                android:id="@+id/tv_alignment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/alignment"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_publisher_description" />
+
+            <TextView
+                android:id="@+id/tv_alignment_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_alignment"
+                app:layout_constraintTop_toTopOf="@+id/tv_alignment"
+                tools:text="Richard Milhouse Jones" />
+
+            <TextView
+                android:id="@+id/tv_appearance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="@string/appearance"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_alignment_description" />
+
+
+            <TextView
+                android:id="@+id/tv_gender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/gender"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_appearance" />
+
+            <TextView
+                android:id="@+id/tv_gender_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_gender"
+                app:layout_constraintTop_toTopOf="@+id/tv_gender"
+                tools:text="Richard Milhouse Jones" />
+
+            <TextView
+                android:id="@+id/tv_race"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/race"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_gender_description" />
+
+            <TextView
+                android:id="@+id/tv_race_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_gender_description"
+                app:layout_constraintStart_toEndOf="@+id/tv_race"
+                app:layout_constraintTop_toTopOf="@+id/tv_race"
+                tools:text="Richard Milhouse Jones" />
+
+
+            <TextView
+                android:id="@+id/tv_height"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/height"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_race_description" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_height"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_height"
+                app:layout_constraintTop_toTopOf="@+id/tv_height"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_data" />
+
+
+            <TextView
+                android:id="@+id/tv_weight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/weight"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_height" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_weight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_weight"
+                app:layout_constraintTop_toTopOf="@+id/tv_weight"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_data" />
+
+
+            <TextView
+                android:id="@+id/tv_eye_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/eye_color"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_weight" />
+
+            <TextView
+                android:id="@+id/tv_eye_color_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_eye_color"
+                app:layout_constraintTop_toTopOf="@+id/tv_eye_color"
+                tools:text="Richard Milhouse Jones" />
+
+            <TextView
+                android:id="@+id/tv_hair_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/hair_color"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_eye_color_description" />
+
+            <TextView
+                android:id="@+id/tv_hair_color_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_hair_color"
+                app:layout_constraintTop_toTopOf="@+id/tv_hair_color"
+                tools:text="Richard Milhouse Jones" />
+
+            <TextView
+                android:id="@+id/tv_work"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="@string/work"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_hair_color_description" />
+
+
+            <TextView
+                android:id="@+id/tv_occupation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/occupation"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_work" />
+
+            <TextView
+                android:id="@+id/tv_occupation_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_occupation"
+                app:layout_constraintTop_toTopOf="@+id/tv_occupation"
+                tools:text="Richard Milhouse Jones" />
+
+            <TextView
+                android:id="@+id/tv_base"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/base"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_occupation_description" />
+
+            <TextView
+                android:id="@+id/tv_base_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_base"
+                app:layout_constraintTop_toTopOf="@+id/tv_base"
+                tools:text="Richard Milhouse Jones" />
+
+
+            <TextView
+                android:id="@+id/tv_connections"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="@string/connections"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_base_description" />
+
+
+            <TextView
+                android:id="@+id/tv_group_affiliation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/group_affiliation"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_connections" />
+
+            <TextView
+                android:id="@+id/tv_group_affiliation_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_group_affiliation"
+                app:layout_constraintTop_toTopOf="@+id/tv_group_affiliation"
+                tools:text="Richard Milhouse Jones" />
+
+            <TextView
+                android:id="@+id/tv_relatives"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/relatives"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_group_affiliation_description" />
+
+            <TextView
+                android:id="@+id/tv_relatives_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_relatives"
+                app:layout_constraintTop_toTopOf="@+id/tv_relatives"
+                tools:text="Richard Milhouse Jones" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".1"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".95"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
